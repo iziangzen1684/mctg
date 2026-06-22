@@ -42,9 +42,14 @@ func parse_arg() {
 			new_data := argv[pt]
 
 			if !file_exists(new_data) {
+<<<<<<< HEAD
 				log.Fatalf("%v :File doesn't exist: %v\n", v, new_data)
 			}
 			pipe = false
+=======
+				log.Fatalf("%v :File not exist: %v\n", v, new_data)
+			}
+>>>>>>> 9572ec20b2c6849f4ff9a8f582d2463acf00f3b8
 			data_path = new_data
 		} else if v == "-c" || v == "--token_count" {
 			pt++
@@ -60,7 +65,11 @@ func parse_arg() {
 
 			token_count = new_count
 		} else if v == "-h" || v == "--help" {
+<<<<<<< HEAD
 			help = true
+=======
+			help = 1
+>>>>>>> 9572ec20b2c6849f4ff9a8f582d2463acf00f3b8
 		} else {
 			log.Fatalf("Invalid flag: %v\n", v)
 		}
@@ -84,9 +93,15 @@ func helper() {
 	help := []string{
 		"Usage: mctg [arguments]\n",
 		"Available flags:\n",
+<<<<<<< HEAD
 		"	-O, --order: Change the Markov chain order length (default to 2).\n",
 		"	-d, --data: Change the input file path (default to data.txt).\n",
 		"	-c, --token_count: Change the token count (default to 100).\n",
+=======
+		"	-O, --order: Change the Markov chain order length.\n",
+		"	-d, --data: Change the data path.\n",
+		"	-c, --token_count: Change the token count.\n",
+>>>>>>> 9572ec20b2c6849f4ff9a8f582d2463acf00f3b8
 		"	-h, --help: Display this help message and exit.\n",
 	}
 	for _, v := range help {

@@ -13,13 +13,21 @@ func main() {
 	log.SetFlags(0)
 
 	parse_arg()
+<<<<<<< HEAD
 	if help == true {
+=======
+	if help != 0 {
+>>>>>>> 9572ec20b2c6849f4ff9a8f582d2463acf00f3b8
 		helper()
 	}
 
 	// Additional check
 	if !file_exists(data_path) {
+<<<<<<< HEAD
 		log.Fatalf("File %v doesn't exist\n", data_path)
+=======
+		log.Fatalf("File %v not exist\n", data_path)
+>>>>>>> 9572ec20b2c6849f4ff9a8f582d2463acf00f3b8
 	}
 
 	// Retrieve file content
@@ -27,7 +35,10 @@ func main() {
 	if err != nil {
 		log.Fatalf("Can't read file %v: %v\n", data_path, err)
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9572ec20b2c6849f4ff9a8f582d2463acf00f3b8
 	data := string(file)
 
 	// Main table logic
